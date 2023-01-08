@@ -11,4 +11,4 @@ elif number2 == 0:
     str = ("0")
 else:
     str = ("greater than 5")
-print("the last digit of {} is {} and is {} ".format(number, number2, str))
+print("Last digit of {} is {} and is {} ".format(number, number2, str))
