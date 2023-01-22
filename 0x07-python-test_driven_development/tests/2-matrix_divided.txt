@@ -1,0 +1,44 @@
+This is the ``matrix_divided`` module
+
+The matrix divided module divides each element of a matrix by a divider
+
+Import function:
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Usage:
+
+Passing matrix of ints and int divider:
+
+>>> matrix_divided([[2, 4, 6], [8, 10, 12]], 2)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+Passing matrix of floats and float divider
+
+>>> matrix_divided([[2.2, 4.4, 6.6], [8.8, 11.0, 13.2]], 2.2)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+Passing matrix with uneven row size:
+
+>>> matrix_divided([[2, 4], [8, 10, 12]], 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+Passing element in matrix that is not int or float:
+
+>>> matrix_divided([["two", "four", "six"], [8, 10, 12]], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Passing divider that is not int or float:
+
+>>> matrix_divided([[2, 4, 6], [8, 10, 12]], "two")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Passing divider with 0 value:
+
+>>> matrix_divided([[2, 4, 6], [8, 10, 12]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+Passing empty matrix:
