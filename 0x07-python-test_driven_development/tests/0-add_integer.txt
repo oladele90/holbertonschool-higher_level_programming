@@ -1,0 +1,41 @@
+This is the ``add_integer`` module.
+
+The add_integer module adds two integers and returns the sum.
+
+Import function:
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Usage:
+
+Passing two ints:
+
+>>> add_integer(1, 2)
+3
+
+Passing two floats:
+
+>>> add_integer(1.1, 2.2)
+3
+
+Passing one int or float:
+
+>>> add_integer(1)
+99
+
+a is not int or float:
+
+>>> add_integer("one", 2)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+b is not int or float:
+
+>>> add_integer(1, "two")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+Passing no args:
+
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
