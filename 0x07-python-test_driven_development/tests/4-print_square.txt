@@ -1,0 +1,35 @@
+This is the ``print_square`` modult
+
+The print square madule prints a square with the # character
+
+Import Function:
+>>> print_square = __import__('4-print_square').print_square
+
+Usage:
+
+Passing integer:
+
+>>> print_square(4)
+####
+####
+####
+####
+
+Passing float less than 0:
+
+>>> print_square(-3.1)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Passing string:
+
+>>> print_square("five")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Passing float:
+
+>>> print_square(3.1)
+###
+###
+###
