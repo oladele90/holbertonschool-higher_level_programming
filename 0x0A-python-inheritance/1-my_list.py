@@ -7,7 +7,7 @@ class MyList(list):
 
     def __init__(self):
         """initializes variable"""
-        
+        super.__init__
     def print_sorted(self):
         """print sorted module prints sorted list of ints in ascending order"""
         print(sorted(self))
