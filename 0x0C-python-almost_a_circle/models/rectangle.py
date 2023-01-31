@@ -11,12 +11,12 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
         super().__init__(id)
-    
+
     @property
     def width(self):
         """Get width"""
         return self.__width
-    
+
     @property
     def height(self):
         """Get height"""
@@ -26,12 +26,12 @@ class Rectangle(Base):
     def x(self):
         """Get x"""
         return self.__x
-    
+
     @property
     def y(self):
         """Get y"""
         return self.__y
-    
+
     @width.setter
     def width(self, value):
         """set width"""
@@ -58,7 +58,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
-    
+
     @y.setter
     def y(self, value):
         """set y"""
@@ -67,7 +67,3 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-
-    
-
-
