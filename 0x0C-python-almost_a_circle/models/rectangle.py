@@ -6,10 +6,10 @@ from models.base import Base
 class Rectangle(Base):
     """create class of rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
@@ -64,6 +64,6 @@ class Rectangle(Base):
         """set y"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
