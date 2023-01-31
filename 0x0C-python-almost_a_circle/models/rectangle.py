@@ -74,12 +74,10 @@ class Rectangle(Base):
 
     def display(self):
         """prints rectangle using '#' character"""
-        for i in range(0, self.__height):
-            if i > 0:
-                print()
-            for j in range(0, self.__width):
-                print("#", end="")
-        print()
+        print(("\n" * self.__y) +
+              "\n".join(((" " * self.__x) + ("#" * self.__width))
+                        for i in range(self.__height)))
+
 
     def __str__(self):
         """redefine __str__ function"""
@@ -88,3 +86,21 @@ class Rectangle(Base):
                                                                  self.y,
                                                                  self.width,
                                                                  self.height)
+
+    def update(self, *args):
+        """update attributes of rectangle"""
+
+        i = 0
+        if args:
+            for arg in args:
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.width = arg
+                if i == 2:
+                    self.height = arg
+                if i == 3:
+                    self.x = arg
+                if i == 4:
+                    self.y = arg
+                i += 1
