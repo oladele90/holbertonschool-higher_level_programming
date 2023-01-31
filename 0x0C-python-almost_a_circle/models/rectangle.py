@@ -78,7 +78,6 @@ class Rectangle(Base):
               "\n".join(((" " * self.__x) + ("#" * self.__width))
                         for i in range(self.__height)))
 
-
     def __str__(self):
         """redefine __str__ function"""
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
