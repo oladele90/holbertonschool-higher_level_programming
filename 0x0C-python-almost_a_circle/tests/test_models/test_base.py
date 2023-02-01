@@ -2,7 +2,8 @@
 """tests for base.py"""
 import unittest
 from models.base import Base
-from models.rectangle import Rectangle
+
+
 
 class Test(unittest.TestCase):
     """unit tests"""
@@ -11,6 +12,7 @@ class Test(unittest.TestCase):
         base1 = Base(None)
         base2 = Base()
         self.assertEqual(base1.id + 1, base2.id)
+
 
 if __name__ == '__main__':
     unittest.main()
