@@ -18,3 +18,4 @@ if __name__ == "__main__":
     results = session.query(State.id, State.name).filter(
                             State.name == "Louisiana").first()
     print("{}".format(results.id))
+    session.commit()
