@@ -11,5 +11,4 @@ if __name__ == "__main__":
 \t- content: {}
 """.format(
               type(html.text),
-              html.text
-              ))
+              html.text))
