@@ -8,7 +8,6 @@ if __name__ == "__main__":
     html = requests.get("https://intranet.hbtn.io/status")
     print("""Body response:
 \t- type: {}
-\t- content: {}
-""".format(
+\t- content: {}""".format(
               type(html.text),
               html.text))
