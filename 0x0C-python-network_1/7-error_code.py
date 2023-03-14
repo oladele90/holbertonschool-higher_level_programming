@@ -6,4 +6,8 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    print(requests.get(sys.argv[1]).status_code)
+    try:
+        requests.get(sys.argv[1])
+        print("Regular request")
+    except:
+        print("Error code: ".format(requests.get(sys.argv[1]).status_code))
