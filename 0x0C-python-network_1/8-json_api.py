@@ -13,7 +13,7 @@ if __name__ == "__main__":
     req = requests.post("http://0.0.0.0:5000/search_user", value)
     try:
         val = req.json()
-        if val.getid is None:
+        if val.get('id') is None:
             print("No result")
         else:
             print("[{}] {}".format(val.get('id'), val.get('name')))
