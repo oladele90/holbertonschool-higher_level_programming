@@ -7,7 +7,7 @@ import sys
 
 if __name__ == "__main__":
     try:
-        requests.get(sys.argv[1])
-        print("Regular request")
+        print(requests.get(sys.argv[1]))
+        
     except:
         print("Error code: ".format(requests.get(sys.argv[1]).status_code))
