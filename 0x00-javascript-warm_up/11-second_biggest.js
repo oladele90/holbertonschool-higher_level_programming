@@ -18,6 +18,5 @@ if (isNaN(process.argv[3])) {
       result = nr;
     }
   }
-  console.log(arr);
   console.log(result);
 }
