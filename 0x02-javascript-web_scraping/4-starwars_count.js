@@ -2,7 +2,7 @@
 const request = require('request');
 request(process.argv[2], function (error, response, body) {
   if (error) {
-    console.error(error);
+    throw error;
   } else {
     const r = JSON.parse(body).results;
     let count = 0;
