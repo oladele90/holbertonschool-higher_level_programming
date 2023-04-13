@@ -5,10 +5,10 @@ request(process.argv[2], function (error, response, body) {
   if (error) {
     throw error;
   } else {
-    const r = JSON.parse(body).results;
+    const result = JSON.parse(body).results;
     let count = 0;
-    for (let i = 0; i < r.length; i++) {
-      if (r[i].characters.includes(Wedge)) {
+    for (let i = 0; i < result.length; i++) {
+      if (result[i].characters.includes(Wedge)) {
         count++;
       }
     }
